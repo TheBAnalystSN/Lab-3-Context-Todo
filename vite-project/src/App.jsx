@@ -10,16 +10,14 @@ import ThemeToggle from "./components/ThemeToggle";
 const AppContent = () => {
   const { theme } = useTheme();
 
-function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <dive className={`app ${theme}`}>      
+    <div className={`app ${theme}`}>
       <ThemeToggle />
       <h1>Todo App</h1>
-      <F ilterButtons />
-      <TodoList /> 
-    </div> 
+      <TodoInput />
+      <FilterButtons />
+      <TodoList />
+    </div>
   );
 };
 
