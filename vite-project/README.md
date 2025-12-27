@@ -1,16 +1,102 @@
-# React + Vite
+# Lab 3 – Context API Todo Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a React Todo application built using the Context API for global state management. The goal of this lab was to avoid prop drilling and instead manage shared state such as todos, visibility filters, and theme settings using multiple React contexts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The application allows users to add, edit, delete, and complete todo items, filter todos by status, toggle between light and dark themes, and persist data using localStorage.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Todo Management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add new todos
+- Edit existing todos
+- Mark todos as completed or active
+- Delete individual todos
+- Clear all completed todos
+
+### Filtering
+
+- View all todos
+- View only active todos
+- View only completed todos
+
+### Theme Switching
+
+- Toggle between light and dark themes
+- Theme selection persists between page refreshes
+
+### Persistence
+
+- Todos are saved to localStorage
+- Theme preference is saved to localStorage
+- Data is restored on page reload
+
+---
+
+## Technologies Used
+
+- React (JavaScript)
+- React Context API
+- Vite
+- LocalStorage
+- CSS
+
+---
+
+## Project Structure
+
+vite-project/
+├── src/
+│ ├── components/
+│ │ ├── TodoInput.jsx
+│ │ ├── TodoList.jsx
+│ │ ├── TodoItem.jsx
+│ │ ├── FilterButtons.jsx
+│ │ └── ThemeToggleButton.jsx
+│ ├── contexts/
+│ │ ├── TodoContext.jsx
+│ │ ├── FilterContext.jsx
+│ │ └── ThemeContext.jsx
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── README.md
+├── REFLECTION.md
+└── package.json
+---
+
+## How to Run the Project
+
+1. Open the project folder in VS Code
+2. Open the terminal and navigate into the project directory:
+
+   ```bash
+   cd vite-project
+
+   Install dependencies:
+   npm install
+
+Start the development server:
+npm run dev
+
+Open the browser and go to:
+http://localhost:5173
+
+Notes
+
+This project uses JavaScript instead of TypeScript
+
+Resources Used
+
+React Documentation (Context API)
+
+Vite Documentation
+
+MDN Web Docs (localStorage)
+
+Class notes and lecture examples
+
