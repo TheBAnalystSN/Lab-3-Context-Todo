@@ -84,7 +84,7 @@ Start the development server:
 npm run dev
 
 Open the browser and go to:
-http://localhost:5173
+<http://localhost:5173>
 
 Notes
 
@@ -99,4 +99,3 @@ Vite Documentation
 MDN Web Docs (localStorage)
 
 Class notes and lecture examples
-
